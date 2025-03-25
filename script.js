@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { PointerLockControls } from "three/addons/controls/PointerLockControls.js";
+import { FirstPersonControls } from "three/addons/controls/FirstPersonControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 console.log(THREE);
@@ -30,7 +30,7 @@ const camRot = {
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = camPos.z;
 scene.add(camera);
-const controls = new PointerLockControls(camera, document.body);
+const controls = new FirstPersonControls(camera, document.body);
 
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
